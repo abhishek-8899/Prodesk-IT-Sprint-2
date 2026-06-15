@@ -1,32 +1,28 @@
-"# Prodesk-IT-Sprint-2" 
 # Cash-Flow: Engineering & Logic Module
 
-A high-performance Salary and Expense Tracker built with pure Vanilla JavaScript. This project focuses on manual DOM manipulation, state management, and data persistence without the use of modern abstraction frameworks.
+A clean, framework-free Salary and Expense Tracker built entirely with pure Vanilla JavaScript and styled using Tailwind CSS. This project focuses on DOM manipulation patterns, state isolation principles, and data serialization mechanics.
 
-##  Engineering Objectives
-*   **State Management:** Implemented a single-source-of-truth state architecture.
-*   **DOM Manipulation:** Manual interface updates using the `document` API.
-*   **Persistence:** JSON serialization for LocalStorage state retention.
-*   **Visualization:** Dynamic data mapping using the Chart.js library.
-*   **API Integration:** Real-time currency conversion via external fetch calls.
+🔗 **Live Deployment URL:** https://prodesk-it-sprint-2.vercel.app/
 
-## 🛠️ Technical Stack
-*   **Logic:** Vanilla JavaScript (ES6+)
-*   **Styling:** Tailwind CSS (via CDN)
-*   **Graphs:** Chart.js
-*   **Icons:** FontAwesome
-*   **API:** Frankfurter (Exchange Rate Data)
+🔗 **GitHub URL:** https://github.com/abhishek-8899/Prodesk-IT-Sprint-2
 
-## 📋 Features implemented
-*   **Phase 1 (Base MVP):** Total salary input, expense logging, and real-time calculation of remaining balance.
-*   **Phase 2 (Persistence):** Full data retention across browser reloads and manual delete operations for ledger entries.
-*   **Phase 3 (Logic & Alerts):** 
-    *   **Threshold Detection:** Automated UI trigger (Red State) when balance drops below 10%.
-    *   **Currency Toggle:** Real-time state conversion between INR and USD.
-   
-## 🔧 Core Logic Architecture
-The application follows a **Unidirectional Data Flow**:
-1.  **Capture:** Inputs are parsed into numbers and validated.
-2.  **State Update:** The global `state` object and `localStorage` are updated.
-3.  **Synchronize:** The `synchronizeDOM()` function clears the current view and rebuilds the UI from the fresh state.
-4.  **Visualize:** The Chart.js instance is destroyed and re-rendered to prevent canvas ghosting.
+
+## 📸 Interface Preview
+
+![Dashboard Workspace Layout](assets/Screenshot.png)
+
+## 🚀 Engineering Objectives
+*   **State Architecture:** Managed application data through a single global `state` object to enforce a single source of truth.
+*   **DOM Manipulation:** Manual item creation, container purges, and updates using native DOM API methods.
+*   **Persistence Layer:** Utilized JSON data serialization (`JSON.stringify` / `JSON.parse`) to sync metrics with browser `localStorage`.
+*   **Data Visualization:** Dynamic pie chart loading using the Chart.js canvas engine.
+*   **API Interceptors:** Built asynchronous `fetch` chains to grab live conversion factors from the Frankfurter exchange rate API.
+
+## 📋 Core Features
+*   **Phase 1 (Base MVP):** Tracks flat salary pools, captures text-based expense nodes, and manages arithmetic deductions.
+*   **Phase 2 (Retention & Deletes):** Preserves logged matrices across manual page reloads. Implemented filter-by-ID record deletion triggers.
+*   **Phase 3 (Threat Alert Logic):** 
+    *   **Budget Ceiling Alerts:** Shifts interface colors (Red Warning state) automatically if liquid balances dip below 10%.
+    *   **Cross-Currency Translation:** Real-time localization toggles for USD and INR states powered by the native `Intl.NumberFormat` engine.
+
+

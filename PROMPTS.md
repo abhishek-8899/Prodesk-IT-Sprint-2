@@ -11,3 +11,4 @@
 6. How do I write a clean event delegation or array filtering mechanism to remove a specific item from a state array using a unique timestamp ID, then force a complete visual update of the UI list?
 
 7. My forms are refreshing the entire web page on click. How do I block the default form execution thread in JavaScript, and what is the best way to handle global validation errors in a single designated alert box?
+8. README Documentation-Help me structure a professional README.md file
